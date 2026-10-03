@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>What is for Dinner</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+   
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container">
+      
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <div class="logo-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="brand-text">
+            <h5>What's For Dinner</h5>
+            <p>Your daily meal inspiration</p>
+          </div>
+        </a>
+
+        
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars fs-4 text-dark"></i>
+        </button>
+
+       
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div
+            class="nav-icons d-flex align-items-center gap-4 ms-auto mt-3 mt-lg-0"
+          >
+            <!-- Saved Recipes -->
+            <a href="#" class="nav-link-item">
+              <i class="fa-solid fa-bookmark"></i>
+              <span class="nav-text">Saved Recipes</span>
+            </a>
+
+            <!-- Recent -->
+            <a href="#" class="nav-link-item">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span class="nav-text">Recent</span>
+            </a>
+
+            <!-- Settings -->
+            <a href="#" class="nav-link-item">
+              <i class="fa-solid fa-gear"></i>
+              <span class="nav-text">Settings</span>
+            </a>
+
+            <!-- Profile -->
+            <a href="#" class="nav-link-item">
+              <img
+                src="img/avatar-2.jpg"
+                alt="Profile"
+                class="profile-img"
+              />
+              <span class="nav-text">Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <nav class="custom-navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2">
+          <div class="logo-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="brand-text">
+            <h5>What's For Dinner</h5>
+            <p>Your daily meal inspiration</p>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div
+            class="nav-icons d-flex align-items-center gap-4 ms-auto mt-3 mt-lg-0"
+          >
+            <i class="fa-regular fa-bookmark"></i>
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <i class="fa-solid fa-gear"></i>
+            <img
+              src="https://ui-avatars.com/api/?name=User&background=random"
+              alt="Profile"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+    </nav> -->
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="recipe-card">
+        <div class="row g-0">
+          <!-- Left Section: Image & Stats -->
+          <div class="col-lg-5">
+            <div class="recipe-image-wrapper">
+              <!-- Placeholder image, you can change src later -->
+              <img
+                src="img/recipe12.jpg" id="recipeImage"
+                alt="Thai Green Curry"
+              />
+
+              <div class="rating-badge border-0">
+                <i class="fa-solid fa-star"></i> <span id="recipeRating">4.5 </span> (156 reviews)
+              </div>
+
+              <div class="info-cards-wrapper">
+                <div class="info-item">
+                  <i class="fa-solid fa-clock icon-clock"></i>
+                  <div class="label">Prep Time</div>
+                  <div class="value" id="prepTime" >20 min</div>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-fire icon-fire"></i>
+                  <div class="label">Cook Time</div>
+                  <div class="value" id="cookTime" >25 min</div>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-users icon-users"></i>
+                  <div class="label">Servings</div>
+                  <div class="value" id="servings" >4 people</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Section: Details & Tabs -->
+          <div class="col-lg-7">
+            <div class="recipe-details">
+              <!-- Header -->
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <span class="tag-badge tag-easy">Easy</span>
+                  <span class="tag-badge tag-med">Mediterranean </span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="action-btn">
+                    <i class="fa-solid fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fa-solid fa-share-nodes"></i>
+                  </button>
+                </div>
+              </div>
+
+              <h1 class="recipe-title"  id="recipeTitle" >Mediterranean Quinoa Bowl</h1>
+              <p class="recipe-desc" id="recipeDesc">
+                Healthy bowl with quinoa, vegetables, and tahini dressing
+              </p>
+
+              <!-- Alert Box -->
+              <div class="alert-box mt-3 mb-4">
+                <div class="alert-icon">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="alert-content">
+                  <h6>Extended Preparation Time</h6>
+                  <p>
+                    This recipe requires more than 45 minutes to prepare. Plan
+                    accordingly!
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tabs Navigation -->
+              <ul
+                class="nav custom-tabs flex-nowrap"
+                id="recipeTabs"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="ingredients-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#ingredients"
+                    type="button"
+                    role="tab"
+                  >
+                    <i class="fa-solid fa-list-check"></i> Ingredients
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="instructions-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#instructions"
+                    type="button"
+                    role="tab"
+                  >
+                    <i class="fa-solid fa-book-open"></i> Instructions
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="nutrition-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nutrition"
+                    type="button"
+                    role="tab"
+                  >
+                    <i class="fa-solid fa-chart-pie"></i> Nutrition
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="tips-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tips"
+                    type="button"
+                    role="tab"
+                  >
+                    <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+                  </button>
+                </li>
+              </ul>
+
+              <!-- Tabs Content -->
+              <div class="tab-content" id="recipeTabsContent">
+                <!-- Ingredients Tab -->
+                <div
+                  class="tab-pane fade show active"
+                  id="ingredients"
+                  role="tabpanel"
+                >
+                  <div class="ingredients-box" id="ingredientsBox">
+                    <div class="ingredient-item">
+                      <span class="ingredient-num">1</span>
+                      <span> 1 cup quinoa</span>
+                    </div>
+                    <div class="ingredient-item">
+                      <span class="ingredient-num">2</span>
+                      <span> Cherry tomatoes, halved</span>
+                    </div>
+                    <div class="ingredient-item">
+                      <span class="ingredient-num">3</span>
+                      <span>Cucumber, diced </span>
+                    </div>
+                    <div class="ingredient-item">
+                      <span class="ingredient-num">4</span>
+                      <span> Red onion, sliced </span>
+                    </div>
+                    <div class="ingredient-item">
+                      <span class="ingredient-num">5</span>
+                      <span> Kalamata olives</span>
+                    </div>
+                    <div class="ingredient-item">
+                      <span class="ingredient-num">6</span>
+                      <span>Feta cheese, crumbled </span>
+                    </div>
+                    <div class="ingredient-item">
+                      <span class="ingredient-num">7</span>
+                      <span> Fresh parsley</span>
+                    </div>
+                    <div class="ingredient-item">
+                      <span class="ingredient-num">8</span>
+                      <span>Tahini dressing </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Instructions Tab (Placeholder) -->
+                <div class="tab-pane fade" id="instructions" role="tabpanel">
+                  <div class="p-4 text-muted text-center">
+                    <!-- Instructions List Container -->
+                    <div class="instructions-list" id="instructionsList"  >
+                      <!-- Step 1 -->
+                      <div class="instruction-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                          Rinse quinoa thoroughly. Cook according to package
+                          directions, usually 15 minutes.
+                        </div>
+                      </div>
+
+                      <!-- Step 2 -->
+                      <div class="instruction-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                          While quinoa cooks, prepare all vegetables and set
+                          aside.
+                        </div>
+                      </div>
+
+                      <!-- Step 3 -->
+                      <div class="instruction-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                          For tahini dressing: mix tahini, lemon juice, garlic,
+                          and water until smooth.
+                        </div>
+                      </div>
+
+                      <!-- Step 4 -->
+                      <div class="instruction-step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">
+                          Fluff cooked quinoa with a fork and let cool slightly.
+                        </div>
+                      </div>
+
+                      <!-- Step 5 -->
+                      <div class="instruction-step">
+                        <div class="step-number">5</div>
+                        <div class="step-text">
+                          Arrange quinoa in bowls. Top with tomatoes, cucumber,
+                          onion, and olives.
+                        </div>
+                      </div>
+
+                      <!-- step 6 -->
+                      <div class="instruction-step">
+                        <div class="step-number">6</div>
+                        <div class="step-text">
+                          Sprinkle with feta cheese and fresh parsley. Drizzle
+                          with tahini dressing.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Nutrition Tab (Placeholder) -->
+                <div class="tab-pane fade" id="nutrition" role="tabpanel">
+                  <div class="p-4 text-muted text-center">
+                    <!-- Nutrition Grid Container -->
+                    <div class="nutrition-grid">
+                      <!-- Calories -->
+                      <div class="nutrition-item">
+                        <div class="nutrition-icon icon-calories">
+                          <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <div class="nutrition-info">
+                          <span class="nutrition-label">Calories</span>
+                          <span class="nutrition-value" id="calories" >480 kcal</span>
+                        </div>
+                      </div>
+
+                      <!-- Protein -->
+                      <div class="nutrition-item">
+                        <div class="nutrition-icon icon-protein">
+                          <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <div class="nutrition-info">
+                          <span class="nutrition-label">Protein</span>
+                          <span class="nutrition-value" id="protein">18g</span>
+                        </div>
+                      </div>
+
+                      <!-- Carbohydrates -->
+                      <div class="nutrition-item">
+                        <div class="nutrition-icon icon-carbs">
+                          <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <div class="nutrition-info">
+                          <span class="nutrition-label">Carbohydrates</span>
+                          <span class="nutrition-value" id="carbs">58g</span>
+                        </div>
+                      </div>
+
+                      <!-- Fat -->
+                      <div class="nutrition-item">
+                        <div class="nutrition-icon icon-fat">
+                          <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <div class="nutrition-info">
+                          <span class="nutrition-label">Fat</span>
+                          <span class="nutrition-value" id="fat">20g</span>
+                        </div>
+                      </div>
+
+                      <!-- Fiber -->
+                      <div class="nutrition-item">
+                        <div class="nutrition-icon icon-fiber">
+                          <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <div class="nutrition-info">
+                          <span class="nutrition-label">Fiber</span>
+                          <span class="nutrition-value" id="fiber">10g</span>
+                        </div>
+                      </div>
+
+                      <!-- Sodium -->
+                      <div class="nutrition-item">
+                        <div class="nutrition-icon icon-sodium">
+                          <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <div class="nutrition-info">
+                          <span class="nutrition-label">Sodium</span>
+                          <span class="nutrition-value" id="sodium">540mg</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Chef's Tips Tab (Placeholder) -->
+                <div class="tab-pane fade" id="tips" role="tabpanel">
+                  <div class="p-4 text-muted text-center">
+                    <div class="tips-list" id="tipsList" >
+                      <!-- Tip 1 -->
+                      <div class="tip-item">
+                        <i class="fa-solid fa-circle-check tip-icon"></i>
+                        <span class="tip-text"
+                          >Rinse quinoa well to remove bitter coating</span
+                        >
+                      </div>
+
+                      <!-- Tip 2 -->
+                      <div class="tip-item">
+                        <i class="fa-solid fa-circle-check tip-icon"></i>
+                        <span class="tip-text"
+                          >Let quinoa cool before adding fresh ingredients</span
+                        >
+                      </div>
+
+                      <!-- Tip 3 -->
+                      <div class="tip-item">
+                        <i class="fa-solid fa-circle-check tip-icon"></i>
+                        <span class="tip-text"
+                          >Make extra tahini dressing - it keeps well in the
+                          fridge</span
+                        >
+                      </div>
+
+                      <!-- Tip 4 -->
+                      <div class="tip-item">
+                        <i class="fa-solid fa-circle-check tip-icon"></i>
+                        <span class="tip-text"
+                          >Add grilled chicken or chickpeas for extra
+                          protein</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Button -->
+              <div class="mt-4">
+                <button class="btn-try-again" onclick="tryAnotherRecipe()" >
+                  <i class="fa-solid fa-rotate-right"></i> Try Another Recipe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
